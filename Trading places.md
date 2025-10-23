@@ -3,6 +3,7 @@ https://host5.metaproblems.com:7606/
 
 # Concept
 We were given a trading platform website where we had to login as admin to get the flag but we were only given user logins.
+- Jwt manipulation
 
 # Solve
 On logging in as user, I inspected the cookies and noticing that we have a jwt token for the current user. I wrote a python script to
