@@ -6,6 +6,7 @@ Balance Desync + JWT-Controlled Balance on Return
 
 # Method of solve   
 Go to /signup, create an account (e.g., test@example.com  / password)
+
     - Go to /login, log in
     - Copy your JWT cookie (use browser dev tools)
     - Go to /products, buy "Sesshōmaru" ($30)
