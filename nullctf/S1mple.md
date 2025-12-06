@@ -9,7 +9,7 @@ Author: mrbgd
 **URL**
 http://public.ctf.r0devnull.team:3023/
 
-#Method of Solve
+# Method of Solve
 This was a web challenge where we were given a login form to login as admin. On recon I found out that that the password field was vulnerable to sql injection
 ~~~
 **Login credentials**
