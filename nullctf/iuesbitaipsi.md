@@ -7,7 +7,7 @@ Author: mrbgd
 ayay uat is iuor taip for iuesbi?
 
 # Method of solve
-We were given a pcap file for analysing usb forensics. I first looked for usb.hid from the file using
+We were given a pcap file for analysing usb forensics. Using tshark I first looked for usb.hid from the file using
 ~~~
 tshark -r nullctf.pcapng -Y "usb.transfer_type == 0x01 && usbhid.data" -T fields -e usbhid.data
 ~~~
@@ -39,7 +39,7 @@ for line in sys.stdin:
             char = SHIFT_KEYS.get(char, char.upper())
         print(char, end="")
 ~~~
-After I used tshark with the scipt to get the flag.
+After I used tshark with the script to get the flag.
 ~~~
 tshark -r nullctf.pcapng -Y "usb.transfer_type == 0x01 && usbhid.data" -T fields -e usbhid.data | python3 decode.py 
 ~~~
